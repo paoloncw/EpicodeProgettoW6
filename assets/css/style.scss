@@ -1,17 +1,67 @@
 // Atelier — Week Project Settimana VI
-// Definisci qui le tue variabili, mixin, override Bootstrap.
 
+// === Variabili ===
+$brand-primary: #2f4a3f;
+$brand-secondary: #c8a97e;
+$radius-base: 12px;
 
-// === Variabili (definisci $brand-primary, $brand-secondary, $radius-base, ecc.) ===
+// === Mixin ===
+@mixin card-elevata {
+  border-radius: $radius-base;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  }
+}
 
+// === Override Bootstrap ===
+.btn-primary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
 
-// === Mixin (definisci almeno @mixin card-elevata o equivalente) ===
+.bg-primary {
+  background-color: $brand-primary !important;
+}
 
+.text-primary {
+  color: $brand-primary !important;
+}
 
+// === Stili custom delle sezioni ===
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-// === Override Bootstrap (sovrascrivi .btn-primary, .bg-primary, .text-primary col tuo colore brand) ===
+#studio {
+  min-height: 80vh;
+}
 
+#servizi {
+  h2 {
+    color: $brand-primary;
+  }
 
+  .servizio-card {
+    @include card-elevata;
+    background-color: #fff;
+    padding: 2rem;
+    height: 100%;
+    text-align: center;
 
-// === Stili custom delle sezioni (header sticky, hero, servizi, contatti, footer) ===
+    .icona {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: $brand-primary;
+      margin-top: 1rem;
+    }
+  }
+}
