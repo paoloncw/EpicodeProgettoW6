@@ -48,4 +48,28 @@ header {
   margin-top: 1rem;
 }
 
+#contatti h2 {
+  color: #2f4a3f;
+}
+#contatti .form-control,
+#contatti .form-select {
+  border-radius: 12px;
+}
+#contatti .form-control:focus,
+#contatti .form-select:focus {
+  border-color: #2f4a3f;
+  box-shadow: 0 0 0 0.2rem rgba(47, 74, 63, 0.25);
+}
+
+footer a {
+  color: #c8a97e;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer h5 {
+  color: #c8a97e;
+}
+
 /*# sourceMappingURL=style.css.map */
