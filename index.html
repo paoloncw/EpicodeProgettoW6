@@ -23,6 +23,7 @@
               <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
               <li class="nav-item"><a class="nav-link" href="#contatti">Contatti</a></li>
             </ul>
+            <button type="button" id="toggle-tema" class="btn btn-outline-light btn-sm ms-md-3">🌙</button>
           </div>
         </div>
       </nav>
@@ -45,6 +46,20 @@
           <div class="col-12 col-md-4"><div class="servizio-card"><div class="icona">🛋️</div><h3>Interior design</h3><p>Scegliamo materiali, luci e arredi per rendere ogni ambiente accogliente.</p></div></div>
           <div class="col-12 col-md-4"><div class="servizio-card"><div class="icona">🏗️</div><h3>Direzione lavori</h3><p>Seguiamo il cantiere passo dopo passo, nel rispetto di tempi e budget.</p></div></div>
         </div>
+      </div>
+    </section>
+
+    <section id="lavori" class="py-5">
+      <div class="container">
+        <h2 class="text-center">I nostri lavori</h2>
+        <p class="text-center text-muted mb-4">Una selezione dei nostri progetti.</p>
+        <div id="filtri" class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+          <button type="button" class="btn btn-outline-primary active" data-categoria="tutti">Tutti</button>
+          <button type="button" class="btn btn-outline-primary" data-categoria="residenziale">Residenziale</button>
+          <button type="button" class="btn btn-outline-primary" data-categoria="uffici">Uffici</button>
+          <button type="button" class="btn btn-outline-primary" data-categoria="negozi">Negozi</button>
+        </div>
+        <div id="griglia-lavori" class="row g-4"></div>
       </div>
     </section>
 
