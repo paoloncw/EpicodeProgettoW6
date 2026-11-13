@@ -1,0 +1,190 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.btn-primary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
+
+.bg-primary {
+  background-color: $brand-primary !important;
+}
+
+.text-primary {
+  color: $brand-primary !important;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#studio {
+  min-height: 80vh;
+}
+
+#servizi {
+  h2 {
+    color: $brand-primary;
+  }
+
+  .servizio-card {
+    @include card-elevata;
+    background-color: #fff;
+    padding: 1.5rem;
+    height: 100%;
+    text-align: center;
+
+    @include solo-su(768px) {
+      padding: 2rem;
+    }
+
+    .icona {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: $brand-primary;
+      margin-top: 1rem;
+    }
+  }
+}
+
+#contatti {
+  h2 {
+    color: $brand-primary;
+  }
+
+  .form-control,
+  .form-select {
+    border-radius: $radius-base;
+
+    &:focus {
+      border-color: $brand-primary;
+      box-shadow: 0 0 0 0.2rem rgba($brand-primary, 0.25);
+    }
+  }
+}
+
+footer {
+  text-align: center;
+
+  @include solo-su(768px) {
+    text-align: left;
+  }
+
+  a {
+    color: $brand-secondary;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h5 {
+    color: $brand-secondary;
+  }
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#lavori {
+  h2 {
+    color: $brand-primary;
+  }
+
+  .btn-outline-primary {
+    color: $brand-primary;
+    border-color: $brand-primary;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover,
+    &.active {
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+      color: #fff;
+    }
+  }
+
+  .lavoro-card {
+    @include card-elevata;
+    background-color: #fff;
+    overflow: hidden;
+    cursor: pointer;
+
+    .lavoro-img {
+      height: 180px;
+      background-color: $brand-secondary;
+    }
+
+    .lavoro-info {
+      padding: 1rem 1.25rem;
+
+      h3 {
+        font-size: 1.1rem;
+        color: $brand-primary;
+      }
+
+      p {
+        margin: 0;
+        text-transform: capitalize;
+        color: #6c757d;
+      }
+    }
+  }
+}
+
+.lavoro-img-grande {
+  height: 320px;
+  background-color: $brand-secondary;
+  border-radius: $radius-base;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e9e9e9;
+
+  #servizi .servizio-card,
+  #lavori .lavoro-card {
+    background-color: #1e1e1e;
+  }
+
+  #servizi h2,
+  #servizi .servizio-card h3,
+  #lavori h2,
+  #lavori .lavoro-card .lavoro-info h3,
+  #contatti h2 {
+    color: $brand-secondary;
+  }
+
+  #lavori .lavoro-card .lavoro-info p {
+    color: #aaa;
+  }
+
+  #lavori .btn-outline-primary {
+    color: $brand-secondary;
+    border-color: $brand-secondary;
+
+    &:hover,
+    &.active {
+      background-color: $brand-secondary;
+      color: #121212;
+    }
+  }
+
+  #contatti {
+    background-color: #1a1a1a !important;
+  }
+
+  .form-control,
+  .form-select {
+    background-color: #2a2a2a;
+    border-color: #444;
+    color: #e9e9e9;
+  }
+}

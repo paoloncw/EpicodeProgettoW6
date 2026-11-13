@@ -90,6 +90,7 @@
               <textarea class="form-control" id="messaggio" rows="4"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Invia</button>
+            <div id="esito-form"></div>
           </form>
         </div>
       </div>
@@ -119,6 +120,22 @@
         <p class="text-center mb-0">© 2026 Atelier. Tutti i diritti riservati.</p>
       </div>
     </footer>
+
+    <div class="modal fade" id="modal-lavoro" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-titolo"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body">
+            <div class="lavoro-img-grande"></div>
+            <p id="modal-meta" class="text-muted mt-3 mb-1"></p>
+            <p id="modal-descrizione"></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>

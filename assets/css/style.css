@@ -35,9 +35,14 @@ header {
 }
 #servizi .servizio-card {
   background-color: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   height: 100%;
   text-align: center;
+}
+@media (min-width: 768px) {
+  #servizi .servizio-card {
+    padding: 2rem;
+  }
 }
 #servizi .servizio-card .icona {
   font-size: 2.5rem;
@@ -61,6 +66,14 @@ header {
   box-shadow: 0 0 0 0.2rem rgba(47, 74, 63, 0.25);
 }
 
+footer {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer {
+    text-align: left;
+  }
+}
 footer a {
   color: #c8a97e;
   text-decoration: none;
@@ -101,6 +114,7 @@ body {
 #lavori .lavoro-card {
   background-color: #fff;
   overflow: hidden;
+  cursor: pointer;
 }
 #lavori .lavoro-card .lavoro-img {
   height: 180px;
@@ -117,6 +131,12 @@ body {
   margin: 0;
   text-transform: capitalize;
   color: #6c757d;
+}
+
+.lavoro-img-grande {
+  height: 320px;
+  background-color: #c8a97e;
+  border-radius: 12px;
 }
 
 body.dark {
